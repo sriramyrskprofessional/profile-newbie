@@ -1,0 +1,131 @@
+@import "_variables.scss";
+@mixin max-width-media($width) {
+    @media(max-width:$width){
+        @content;
+    }
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font;
+    background-color: $Dark-cyan;
+    margin: 0;
+    position: relative;
+    min-height: 99vh;
+    // display: flex;
+}
+.first-svg{
+        background: url("images/bg-pattern-top.svg");
+        width: 50vw;
+        height: 50vh;
+        
+        background-position: right top 90%;
+        @include max-width-media(27rem){
+            height: 50vh;
+            width: 50vw;
+        }
+    }
+.last-svg{
+        background: url("images/bg-pattern-bottom.svg");
+        width: 50vw;
+        height: 50vh;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-position-y: 4rem;
+        @include max-width-media(27rem){
+            height: 70vh;
+            width: 60vw;
+            background-position-y: -2rem;
+        }
+    }
+.bottom-svg{
+    position: absolute;
+    right: -25rem;
+    bottom: -25rem;
+}
+.content{
+    border-radius: 0.5rem;
+    background-color: white;
+    width: 350px;
+    height: 40vh;
+    z-index: 10;
+    position: absolute;
+    top: 27%;
+    left: 40%;
+    @include max-width-media(27rem){
+        // background-position-y: -2rem;
+        height: 57vh;
+        left: 4%;
+        top: 20%;
+    }
+    .bio{
+        position: relative;
+        top: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .place{
+        margin: 0;
+        margin-top: 1rem;
+    }
+    h3{
+        color: $Very-dark-desaturated-blue;
+        font-weight: bold;
+        margin: 0 ;
+        margin-left: 1rem;
+        
+    }
+    p{
+        color: $Dark-grayish-blue;
+        margin:0 1rem;
+    }
+}
+.card-svg{
+    background: url("images/bg-pattern-card.svg");
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.circle{
+    background-color: black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: url("images/image-victor.jpg");
+    position: absolute;
+    top:21%;
+    left: 35%;
+    // border-color: white;
+    border: 5px solid white;
+}
+.info{
+    padding-top: 1.5rem;
+    border-top: 0.001px solid #ccc;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    h3{
+        color: $Very-dark-desaturated-blue;
+    }
+    h3,p{
+        margin: 0;
+
+    }
+    color: $Dark-gray;
+}
