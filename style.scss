@@ -18,39 +18,35 @@ body{
 }
 .first-svg{
         background: url("images/bg-pattern-top.svg");
-        width: 50vw;
-        height: 50vh;
+        width: 720px;
+        height: 486px;
         
         background-position: right top 90%;
         @include max-width-media(27rem){
-            height: 50vh;
-            width: 50vw;
+            height: 333px;
+            width: 187px;
         }
     }
 .last-svg{
         background: url("images/bg-pattern-bottom.svg");
-        width: 50vw;
-        height: 50vh;
+        width: 720px;
+        height: 486px;
         position: absolute;
         right: 0;
         bottom: 0;
         background-position-y: 4rem;
         @include max-width-media(27rem){
-            height: 70vh;
-            width: 60vw;
+            height: 466px;
+            width: 225px;
             background-position-y: -2rem;
         }
     }
-.bottom-svg{
-    position: absolute;
-    right: -25rem;
-    bottom: -25rem;
-}
+
 .content{
     border-radius: 0.5rem;
     background-color: white;
     width: 350px;
-    height: 40vh;
+    height: 388px;
     z-index: 10;
     position: absolute;
     top: 27%;
